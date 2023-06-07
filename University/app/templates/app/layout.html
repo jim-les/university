@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><asp:DynamicValidator runat="server" />
+
+    <title>{{ title }} - Jordan Colledge</title>
+    {% load static %}
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/style.css' %}" />
+    <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-md bg-body-tertiary py-0 sticky-top layout_navbar">
+        <div class="container-fluid bg-dark pd-2">
+            <a href="" class="navbar-brand text-light mx-4">Jordan College</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon bg-light"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+                <ul class="navbar-nav nav nav-pills" role="tablist">
+                    <li class="nav-item active" role="presentation">
+                        <a href="#home" id="home-tab" class="nav-link text-light mx-3 active" data-toggle="pill">HOME</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a href="#about" id="about-tab" class="nav-link text-light mx-3" data-toggle="pill">ABOUT</a>
+
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a href="#services" class="nav-link text-light mx-3" data-toggle="pill">COURSE</a>
+
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a href="#portfolio" class="nav-link text-light mx-3" data-toggle="pill">ADMISSION</a>
+
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a href="#contact" class="nav-link text-light mx-3" data-toggle="pill">CONTACT</a>
+
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        {% block content %}{% endblock %}
+        <hr />
+        <footer>
+            <p>&copy; {{ year }} - My Django Application</p>
+        </footer>
+    </div>
+
+    <!--<script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
+    <script src="{% static 'app/scripts/respond.js' %}"></script> -->
+    script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>
